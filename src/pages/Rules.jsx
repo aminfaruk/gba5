@@ -51,7 +51,7 @@ const sections = [
           <li>Playoffs and Championship Final: Best of 5</li>
         </ul>
         <div className="bg-gba-50 border border-gba-200 rounded-lg p-4 mb-5">
-          <p className="text-xs font-semibold text-gba-700 uppercase tracking-widest mb-2">📜 GBA Playoff Rule — Late Arrival / Injury Procedure</p>
+          <p className="text-xs font-semibold text-gba-700 uppercase tracking-widest mb-2">📜 GBA Playoff Rule: Late Arrival / Injury Procedure</p>
           <ol className="list-decimal list-inside text-gray-600 space-y-1.5 text-sm">
             <li>The other playoff series will be played back-to-back until Game 2 is completed.</li>
             <li>After Game 2, the delayed series is expected to begin immediately.</li>
@@ -126,7 +126,7 @@ const sections = [
         <h3 className="font-bold text-gba-800 mb-2">5.1 Match Format</h3>
         <ul className="list-disc list-inside text-gray-600 space-y-1 mb-5">
           <li>First to 7 (may change to 9 or 11 in Play-Ins and Playoffs). Win by 2.</li>
-          <li>No free wins — only from forfeits. All games must be played!</li>
+          <li>No free wins. Only from forfeits. All games must be played!</li>
           <li>If a team does not have 5 active players, games may start 5v4</li>
           <li>If a team is missing 2 or more players, the game is forfeited 7–0</li>
           <li>Teams may play 3–5 players if 1 or 2 players have fouled out</li>
@@ -229,7 +229,7 @@ const sections = [
           <li>Teams over the 470-point cap may only trade within 20 points above or to reduce cap</li>
           <li>If a GM wishes to re-trade a player, it must happen within 5 hours of the original trade</li>
           <li>After 5 hours, the player must play at least 1 game before being traded again</li>
-          <li>A player cannot be traded back to their original team immediately — must play 2 games first</li>
+          <li>A player cannot be traded back to their original team immediately. Must play 2 games first.</li>
           <li>Players with season-ending injuries are ineligible for trade unless within 1 hour of announcement</li>
           <li>Fabricated injuries result in suspensions, fines, draft pick loss, and/or removal</li>
         </ul>
@@ -361,8 +361,8 @@ const sections = [
         <ul className="list-disc list-inside text-gray-600 space-y-1">
           <li>Teams not playing may ref, record, or keep stats</li>
           <li>Highlights and AI graphics on Instagram & TikTok channels</li>
-          <li>All league trades, free agency moves, news, and drama are posted on Telegram and Instagram only — anything posted elsewhere is not legitimate</li>
-          <li>Players have the right to private conversations regarding trades. Saying "Private conversation" protects the identity of the source — but this right does not apply one week before or after the trade deadline</li>
+          <li>All league trades, free agency moves, news, and drama are posted on Telegram and Instagram only. Anything posted elsewhere is not legitimate.</li>
+          <li>Players have the right to private conversations regarding trades. Saying "Private conversation" protects the identity of the source. This right does not apply one week before or after the trade deadline.</li>
         </ul>
       </div>
     ),

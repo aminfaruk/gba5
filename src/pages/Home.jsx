@@ -20,7 +20,7 @@ export default function Home() {
         <h1 className="text-4xl sm:text-5xl font-extrabold text-gba-900 leading-tight mb-4">GBA</h1>
         <p className="text-gray-500 max-w-xl text-base leading-relaxed">
           A competitive recreational basketball league based in Granville.
-          {' '}Season 4 complete — {latest.teamsCount} teams, {latest.playersCount} players.
+          {' '}Season 4 complete. {latest.teamsCount} teams, {latest.playersCount} players.
           {' '}Tracking stats, standings, and history since Season 1.
         </p>
       </div>
