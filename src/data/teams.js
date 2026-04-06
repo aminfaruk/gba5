@@ -1,10 +1,12 @@
 // Source: GBA Teams sheet — current active rosters
+// standings: gp/w/l for Season 4 final, status = green (clinched) | orange (play-in) | red (eliminated)
 export const teams = [
   {
     id: 'locked-in',
     name: 'Locked In',
     gm: 'Motaz',
     total: 317,
+    standings: { gp: 13, w: 7, l: 6, pf: 77, pa: 71, diff: 6, status: 'green' },
     players: [
       { name: 'Safdari', points: 77 },
       { name: 'Toby', points: 87 },
@@ -17,6 +19,7 @@ export const teams = [
     name: 'OGs',
     gm: 'Ronni',
     total: 366,
+    standings: { gp: 12, w: 6, l: 6, pf: 75, pa: 75, diff: 0, status: 'orange' },
     players: [
       { name: 'Moaaz', points: 67 },
       { name: 'Khalid', points: 95 },
@@ -29,6 +32,7 @@ export const teams = [
     name: 'Ressurection',
     gm: 'Emad',
     total: 366,
+    standings: { gp: 14, w: 11, l: 3, pf: 93, pa: 70, diff: 23, status: 'green' },
     players: [
       { name: 'Dowang', points: 98 },
       { name: 'Arop', points: 72 },
@@ -41,6 +45,7 @@ export const teams = [
     name: 'Hoop Dreams',
     gm: 'Faisal',
     total: 349,
+    standings: { gp: 13, w: 3, l: 10, pf: 52, pa: 83, diff: -31, status: 'red' },
     players: [
       { name: 'Abdul F.', points: 98 },
       { name: 'Krish', points: 78 },
@@ -53,6 +58,7 @@ export const teams = [
     name: 'Show Time',
     gm: 'Yousef',
     total: 360,
+    standings: { gp: 12, w: 6, l: 6, pf: 71, pa: 73, diff: -2, status: 'orange' },
     players: [
       { name: 'Mert', points: 50 },
       { name: 'Amin', points: 114 },
@@ -65,6 +71,7 @@ export const teams = [
     name: 'Dub Squad',
     gm: 'Serrie',
     total: 326,
+    standings: { gp: 13, w: 5, l: 8, pf: 71, pa: 72, diff: -1, status: 'red' },
     players: [
       { name: 'John Turay', points: 134 },
       { name: 'Ammar', points: 56 },
@@ -77,6 +84,7 @@ export const teams = [
     name: 'Flight Crew',
     gm: 'Anthony',
     total: 342,
+    standings: { gp: 13, w: 7, l: 6, pf: 80, pa: 75, diff: 5, status: 'green' },
     players: [
       { name: 'Sabir', points: 124 },
       { name: 'Hamze', points: 62 },

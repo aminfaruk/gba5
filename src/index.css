@@ -4,6 +4,11 @@
 
 @layer base {
   body {
-    @apply bg-gba-50 text-slate-800 font-sans;
+    @apply bg-surface text-on-surface font-body antialiased;
+  }
+
+  /* Tabular nums for all stat tables */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
   }
 }
