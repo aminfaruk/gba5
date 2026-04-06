@@ -26,9 +26,9 @@ const standings = [...teams]
   }))
 
 const statusColors = {
-  green:  { border: '#2e7d32', bg: 'rgba(46,125,50,0.06)' },
-  orange: { border: '#ed6c02', bg: 'rgba(237,108,2,0.06)' },
-  red:    { border: '#d32f2f', bg: 'rgba(211,47,47,0.06)' },
+  green:  { border: '#2e7d32' },
+  orange: { border: '#ed6c02' },
+  red:    { border: '#d32f2f' },
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -38,14 +38,14 @@ const awards = [
   {
     label: 'Most Valuable Player',
     winner: latest.mvp,
-    detail: `Ressurection`,
+    detail: 'Ressurection',
     icon: 'stars',
     borderColor: 'border-gba-700',
   },
   {
     label: 'Defensive Player',
     winner: latest.dpoy,
-    detail: `Flight Crew`,
+    detail: 'Flight Crew',
     icon: 'shield',
     borderColor: 'border-secondary',
   },
@@ -59,7 +59,7 @@ const awards = [
   {
     label: 'Finals MVP',
     winner: latest.fmvp,
-    detail: `Ressurection`,
+    detail: 'Ressurection',
     icon: 'military_tech',
     borderColor: 'border-secondary',
   },
@@ -70,39 +70,39 @@ const awards = [
 ───────────────────────────────────────────────────────────── */
 export default function Home() {
   return (
-    <main className="max-w-screen-2xl mx-auto px-4 sm:px-6 py-10 sm:py-14 space-y-20">
+    <main className="max-w-screen-2xl mx-auto px-3 sm:px-6 py-8 sm:py-14 space-y-16 sm:space-y-20">
 
       {/* ══════════════════════════════════════════════════════
           SECTION 1: STANDINGS LEADERBOARD (Hero)
       ══════════════════════════════════════════════════════ */}
       <section id="standings">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row justify-between items-baseline mb-8 gap-4">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-headline font-extrabold tracking-tight text-on-surface uppercase">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-baseline mb-6 sm:mb-8 gap-3">
+          <h1 className="text-2xl sm:text-5xl md:text-6xl font-headline font-extrabold tracking-tight text-on-surface uppercase">
             Season 4 Final Standings
           </h1>
-          <div className="flex items-center gap-2 px-4 py-2 bg-surface-low rounded-lg">
+          <div className="flex items-center gap-2 px-3 py-1.5 bg-surface-low rounded-lg">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-status-green opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-status-green" />
             </span>
-            <span className="text-xs font-semibold uppercase tracking-widest text-on-surface-variant">
+            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-on-surface-variant">
               Live Update
             </span>
           </div>
         </div>
 
         {/* Table */}
-        <div className="overflow-x-auto rounded-xl bg-surface-lowest shadow-[0_20px_40px_rgba(28,27,27,0.06)]">
-          <table className="w-full text-left border-collapse">
+        <div className="overflow-x-auto rounded-xl bg-surface-lowest shadow-[0_20px_40px_rgba(28,27,27,0.06)] -mx-3 sm:mx-0">
+          <table className="w-full text-left border-collapse min-w-[420px]">
             <thead>
               <tr className="bg-surface-highest">
-                <th className="px-4 sm:px-6 py-5 text-[10px] font-bold uppercase tracking-[0.2em] text-outline w-16">#</th>
-                <th className="px-4 sm:px-6 py-5 text-[10px] font-bold uppercase tracking-[0.2em] text-outline">Team Name</th>
-                <th className="px-4 sm:px-6 py-5 text-[10px] font-bold uppercase tracking-[0.2em] text-outline text-center">GP</th>
-                <th className="px-4 sm:px-6 py-5 text-[10px] font-bold uppercase tracking-[0.2em] text-outline text-center">W</th>
-                <th className="px-4 sm:px-6 py-5 text-[10px] font-bold uppercase tracking-[0.2em] text-outline text-center">L</th>
-                <th className="px-4 sm:px-6 py-5 text-[10px] font-bold uppercase tracking-[0.2em] text-outline text-right">Win%</th>
+                <th className="px-3 sm:px-6 py-3 sm:py-5 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-outline w-10 sm:w-16">#</th>
+                <th className="px-3 sm:px-6 py-3 sm:py-5 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-outline">Team</th>
+                <th className="px-2 sm:px-6 py-3 sm:py-5 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-outline text-center">GP</th>
+                <th className="px-2 sm:px-6 py-3 sm:py-5 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-outline text-center">W</th>
+                <th className="px-2 sm:px-6 py-3 sm:py-5 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-outline text-center">L</th>
+                <th className="px-3 sm:px-6 py-3 sm:py-5 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-outline text-right">Win%</th>
               </tr>
             </thead>
             <tbody className="font-body">
@@ -115,24 +115,24 @@ export default function Home() {
                   <tr
                     key={row.rank}
                     className={`group transition-colors duration-200 hover:bg-gba-50/60 ${isEven ? 'bg-surface-lowest' : 'bg-surface-low'}`}
-                    style={{ borderLeft: `6px solid ${colors.border}` }}
+                    style={{ borderLeft: `5px solid ${colors.border}` }}
                   >
-                    <td className="px-4 sm:px-6 py-4 font-headline font-bold text-lg text-gba-700 tabular-nums">
+                    <td className="px-3 sm:px-6 py-3 sm:py-4 font-headline font-bold text-sm sm:text-lg text-gba-700 tabular-nums">
                       {String(row.rank).padStart(2, '0')}
                     </td>
-                    <td className="px-4 sm:px-6 py-4 font-headline font-bold text-base sm:text-lg text-on-surface">
+                    <td className="px-3 sm:px-6 py-3 sm:py-4 font-headline font-bold text-sm sm:text-lg text-on-surface">
                       {row.team}
                     </td>
-                    <td className="px-4 sm:px-6 py-4 text-center font-medium tabular-nums text-on-surface-variant">
+                    <td className="px-2 sm:px-6 py-3 sm:py-4 text-center text-xs sm:text-base font-medium tabular-nums text-on-surface-variant">
                       {row.gp}
                     </td>
-                    <td className="px-4 sm:px-6 py-4 text-center font-semibold tabular-nums text-on-surface">
+                    <td className="px-2 sm:px-6 py-3 sm:py-4 text-center text-xs sm:text-base font-semibold tabular-nums text-on-surface">
                       {row.w}
                     </td>
-                    <td className="px-4 sm:px-6 py-4 text-center font-medium tabular-nums text-on-surface-variant">
+                    <td className="px-2 sm:px-6 py-3 sm:py-4 text-center text-xs sm:text-base font-medium tabular-nums text-on-surface-variant">
                       {row.l}
                     </td>
-                    <td className="px-4 sm:px-6 py-4 text-right font-bold tabular-nums text-on-surface">
+                    <td className="px-3 sm:px-6 py-3 sm:py-4 text-right text-xs sm:text-base font-bold tabular-nums text-on-surface">
                       {winPct}
                     </td>
                   </tr>
@@ -143,22 +143,22 @@ export default function Home() {
         </div>
 
         {/* Legend */}
-        <div className="mt-6 flex flex-wrap gap-6 sm:gap-8">
-          <div className="flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full bg-status-green" />
-            <span className="text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
+        <div className="mt-4 sm:mt-6 flex flex-wrap gap-4 sm:gap-8">
+          <div className="flex items-center gap-1.5">
+            <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-status-green" />
+            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
               Clinched Playoffs
             </span>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full bg-status-orange" />
-            <span className="text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
+          <div className="flex items-center gap-1.5">
+            <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-status-orange" />
+            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
               Play-In Tournament
             </span>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full bg-status-red" />
-            <span className="text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
+          <div className="flex items-center gap-1.5">
+            <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-status-red" />
+            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
               Eliminated
             </span>
           </div>
@@ -168,31 +168,31 @@ export default function Home() {
       {/* ══════════════════════════════════════════════════════
           SECTION 2: SEASON AWARDS
       ══════════════════════════════════════════════════════ */}
-      <section id="awards" className="space-y-8">
-        <h2 className="text-3xl sm:text-4xl font-headline font-extrabold tracking-tight text-on-surface">
+      <section id="awards" className="space-y-6 sm:space-y-8">
+        <h2 className="text-2xl sm:text-4xl font-headline font-extrabold tracking-tight text-on-surface">
           Season {latest.season} Awards
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
           {awards.map((a) => (
             <div
               key={a.label}
-              className={`relative group p-7 sm:p-8 bg-surface-low rounded-xl border-t-4 ${a.borderColor} transition-all duration-300 hover:-translate-y-1 overflow-hidden`}
+              className={`relative group p-4 sm:p-8 bg-surface-low rounded-xl border-t-4 ${a.borderColor} transition-all duration-300 hover:-translate-y-1 overflow-hidden`}
             >
               {/* Background icon */}
               <div className="absolute -right-3 -bottom-3 opacity-[0.07] group-hover:opacity-[0.12] transition-opacity duration-300">
-                <span className="material-symbols-outlined text-[100px] sm:text-[120px]">
+                <span className="material-symbols-outlined text-[72px] sm:text-[120px]">
                   {a.icon}
                 </span>
               </div>
 
-              <p className="text-[10px] font-bold uppercase tracking-widest text-outline mb-3 relative">
+              <p className="text-[8px] sm:text-[10px] font-bold uppercase tracking-widest text-outline mb-2 sm:mb-3 relative">
                 {a.label}
               </p>
-              <h3 className="text-xl sm:text-2xl font-bold text-gba-700 font-headline relative leading-tight">
+              <h3 className="text-base sm:text-2xl font-bold text-gba-700 font-headline relative leading-tight">
                 {a.winner}
               </h3>
-              <p className="mt-3 text-sm font-medium text-on-surface-variant relative">
+              <p className="mt-2 sm:mt-3 text-xs sm:text-sm font-medium text-on-surface-variant relative">
                 {a.detail}
               </p>
             </div>
@@ -203,17 +203,17 @@ export default function Home() {
       {/* ══════════════════════════════════════════════════════
           SECTION 3: TEAM PLAYER POINTS
       ══════════════════════════════════════════════════════ */}
-      <section id="player-points" className="bg-surface-low p-6 sm:p-8 rounded-2xl">
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-2xl sm:text-3xl font-headline font-bold text-on-surface">
-            Current Team Player Points
+      <section id="player-points" className="bg-surface-low p-4 sm:p-8 rounded-2xl">
+        <div className="flex justify-between items-center mb-6 sm:mb-8">
+          <h2 className="text-xl sm:text-3xl font-headline font-bold text-on-surface">
+            Team Player Points
           </h2>
           <Link
             to="/teams"
-            className="group flex items-center gap-1.5 text-gba-700 font-bold text-sm tracking-wide transition-all hover:gap-2.5"
+            className="group flex items-center gap-1.5 text-gba-700 font-bold text-xs sm:text-sm tracking-wide transition-all hover:gap-2.5"
           >
             View all
-            <span className="material-symbols-outlined text-sm">arrow_forward</span>
+            <span className="material-symbols-outlined text-xs sm:text-sm">arrow_forward</span>
           </Link>
         </div>
 
@@ -221,10 +221,10 @@ export default function Home() {
           <table className="w-full text-left">
             <thead>
               <tr className="bg-surface-highest/50">
-                <th className="px-4 sm:px-6 py-4 text-[11px] font-bold uppercase tracking-widest text-outline w-12">#</th>
-                <th className="px-4 sm:px-6 py-4 text-[11px] font-bold uppercase tracking-widest text-outline">Team</th>
-                <th className="px-4 sm:px-6 py-4 text-[11px] font-bold uppercase tracking-widest text-outline text-center">GM</th>
-                <th className="px-4 sm:px-6 py-4 text-[11px] font-bold uppercase tracking-widest text-outline text-right">Player Points</th>
+                <th className="px-3 sm:px-6 py-3 sm:py-4 text-[9px] sm:text-[11px] font-bold uppercase tracking-widest text-outline w-8 sm:w-12">#</th>
+                <th className="px-3 sm:px-6 py-3 sm:py-4 text-[9px] sm:text-[11px] font-bold uppercase tracking-widest text-outline">Team</th>
+                <th className="px-2 sm:px-6 py-3 sm:py-4 text-[9px] sm:text-[11px] font-bold uppercase tracking-widest text-outline text-center">GM</th>
+                <th className="px-3 sm:px-6 py-3 sm:py-4 text-[9px] sm:text-[11px] font-bold uppercase tracking-widest text-outline text-right">Points</th>
               </tr>
             </thead>
             <tbody>
@@ -236,21 +236,21 @@ export default function Home() {
                     borderBottom: i < sorted.length - 1 ? '1px solid #eae7e7' : 'none',
                   }}
                 >
-                  <td className="px-4 sm:px-6 py-4 font-bold tabular-nums text-on-surface-variant">
+                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-base font-bold tabular-nums text-on-surface-variant">
                     {i + 1}
                   </td>
-                  <td className="px-4 sm:px-6 py-4">
+                  <td className="px-3 sm:px-6 py-3 sm:py-4">
                     <Link
                       to={`/teams/${team.id}`}
-                      className="font-semibold text-on-surface hover:text-gba-700 transition-colors"
+                      className="text-xs sm:text-base font-semibold text-on-surface hover:text-gba-700 transition-colors"
                     >
                       {team.name}
                     </Link>
                   </td>
-                  <td className="px-4 sm:px-6 py-4 text-center tabular-nums text-on-surface-variant">
+                  <td className="px-2 sm:px-6 py-3 sm:py-4 text-center text-xs sm:text-base tabular-nums text-on-surface-variant">
                     {team.gm}
                   </td>
-                  <td className="px-4 sm:px-6 py-4 text-right font-extrabold text-gba-700 tabular-nums">
+                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-right text-xs sm:text-base font-extrabold text-gba-700 tabular-nums">
                     {team.total.toLocaleString()}
                   </td>
                 </tr>
